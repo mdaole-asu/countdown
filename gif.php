@@ -18,10 +18,10 @@
 	$delay = 100;// milliseconds
 
 	$font = array(
-		'size' => 34, // Font size, in pts usually.
+		'size' => 29, // Font size, in pts usually.
 		'angle' => 0, // Angle of the text
 		'x-offset' => 6, // The larger the number the further the distance from the left hand side, 0 to align to the left.
-		'y-offset' => 48, // The vertical alignment, trial and error between 20 and 60.
+		'y-offset' => 45, // The vertical alignment, trial and error between 20 and 60.
 		'file' => 'RobotoCondensed-Regular.ttf', // Font path
 		'color' => imagecolorallocate($image, 255, 255, 255), // RGB Colour of the text
 	);
@@ -33,7 +33,7 @@
 			// Open the first source image and add the text.
 			$image = imagecreatefrompng('images/countdown.png');
 			;
-			$text = $interval->format('00  00  00  00');
+			$text = $interval->format('00 : 00 : 00 : 00');
 			imagettftext ($image , $font['size'] , $font['angle'] , $font['x-offset'] , $font['y-offset'] , $font['color'] , $font['file'], $text );
 			ob_start();
 			imagegif($image);
@@ -46,7 +46,7 @@
 			// Open the first source image and add the text.
 			$image = imagecreatefrompng('images/countdown.png');
 			;
-			$text = $interval->format('0%a  %H  %I  %S');
+			$text = $interval->format('0%a : %H : %I : %S');
 			imagettftext ($image , $font['size'] , $font['angle'] , $font['x-offset'] , $font['y-offset'] , $font['color'] , $font['file'], $text );
 			ob_start();
 			imagegif($image);
