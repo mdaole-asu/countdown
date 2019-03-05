@@ -20,7 +20,7 @@
 	$font = array(
 		'size' => 29, // Font size, in pts usually.
 		'angle' => 0, // Angle of the text
-		'x-offset' => 6, // The larger the number the further the distance from the left hand side, 0 to align to the left.
+		'x-offset' => 35, // The larger the number the further the distance from the left hand side, 0 to align to the left.
 		'y-offset' => 45, // The vertical alignment, trial and error between 20 and 60.
 		'file' => 'RobotoCondensed-Regular.ttf', // Font path
 		'color' => imagecolorallocate($image, 0, 0, 0), // RGB Colour of the text
