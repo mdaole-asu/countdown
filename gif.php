@@ -23,7 +23,7 @@
 		'x-offset' => 6, // The larger the number the further the distance from the left hand side, 0 to align to the left.
 		'y-offset' => 45, // The vertical alignment, trial and error between 20 and 60.
 		'file' => 'RobotoCondensed-Regular.ttf', // Font path
-		'color' => imagecolorallocate($image, 255, 255, 255), // RGB Colour of the text
+		'color' => imagecolorallocate($image, 0, 0, 0), // RGB Colour of the text
 	);
 	for($i = 0; $i <= 60; $i++){
 		
@@ -46,7 +46,7 @@
 			// Open the first source image and add the text.
 			$image = imagecreatefrompng('images/countdown.png');
 			;
-			$text = $interval->format('0%a : %H : %I : %S');
+			$text = $interval->format('%a : %H : %I : %S');
 			imagettftext ($image , $font['size'] , $font['angle'] , $font['x-offset'] , $font['y-offset'] , $font['color'] , $font['file'], $text );
 			ob_start();
 			imagegif($image);
